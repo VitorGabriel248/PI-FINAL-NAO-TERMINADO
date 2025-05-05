@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TUNNER STUDIO</title>
+
+    <link rel="stylesheet" href="Home.css">
+    <label for="menu-mobile" class="menu-toggle">&#9776;</label>
+     <!--menu-->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+ <!--começo do header-->
+
+ <body>
+      
+     <header>
+     <!-- Logotipo à esquerda -->
+     <div class="logo">
+     <img src="imagem/LOGO_CLIENTE-removebg-preview (1).png" alt="Logotipo">
+     </div>
+      
+         <!-- Toggle do menu para mobile, controlado pelo checkbox -->
+     <input type="checkbox" id="menu-mobile">
+     <label for="menu-mobile" class="menu-toggle">&#9776;</label>
+      
+         <!-- Menu para desktop e mobile -->
+     <nav>
+     <ul class="menu">
+     <!-- Links de navegação principais -->
+     <li><a href="#">Home</a></li>
+     <li><a href="#">Sobre</a></li>
+     <li><a href="#">Serviços</a></li>
+     <li><a href="#">Contato</a></li>
+      
+                 <!-- Área de itens extras: Favoritos, Carrinho e Login apenas com ícones -->
+     <li class="icon-only"><a href="#"><i class="fas fa-heart"></i></a></li>
+     <li class="icon-only"><a href="carinho.html"><i class="fas fa-shopping-cart"></i></a></li>
+     <li class="icon-only"><a href="#"><i class="fas fa-user"></i></a></li>
+     </ul>
+     </nav>
+      
+         <!-- Barra de pesquisa -->
+     <div class="search-bar">
+     <input type="text" placeholder="Pesquisar...">
+     <button>Buscar</button>
+     </div>
+    
+</header>
+
+    <ul class="Categorias">  
+     <!-- Links de navegação principais -->
+        <li><a href="Guitarras.html">guitarras</a></li>
+        <li><a href="Baixos.html">Baixos</a></li>
+        <li><a href="Bateria.html">baterias</a></li>
+      
+   
+    </ul>     
+
+ <!--carrossel-->
+ <div class="carrossel-container">
+    <div class="carrossel-slide">
+      <div class="carrossel-slide-inner" id="slide">
+        <img src="imagem/jovem-bonita-tocando-violao-dentro-de-casa.jpg" alt="">
+        <img src="imagem/imagemcarrosseil2.webp" alt="Imagem 2 ">
+        <img src="imagem/imagemcarrosseil1.webp" alt="Imagem 3 ">      
+      </div>
+    </div>
+   
+    <div class="carrossel-nav">
+      <button class="carrossel-btn" onclick="prevSlide()">‹</button>
+      <button class="carrossel-btn" onclick="nextSlide()">›</button>
+    </div>
+  </div>
+  
+  <script>
+    let currentIndex = 0;
+   
+    function showSlide(index) {
+      const slide = document.getElementById('slide');
+      const totalSlides = slide.children.length;
+      if (index >= totalSlides) index = 0;
+      if (index < 0) index = totalSlides - 1;
+      currentIndex = index;
+      slide.style.transform = `translateX(-${index * 100}%)`;
+    }
+   
+    function nextSlide() {
+      showSlide(currentIndex + 1);
+    }
+   
+    function prevSlide() {
+      showSlide(currentIndex - 1);
+    }
+  </script>
+<div class="caixa-informaçao">
+   <h4>AQUI PREZAMOS A QUALIDADE</h4>
+
+            <div class="entrega">
+                
+                <p>Entregas Pontuais</p>
+                <img src="imagem/transport_15056405.png" alt="">
+                
+            </div>
+            <div class="pagamento">
+            <img src="imagem/cartao-de-credito.png" alt="">
+            <p>Parcelamos 12x sem juros</p>
+            </div>
+
+
+</div>
+
+
+
+
+<div class="page-inner-content">
+    <h3 class="section-texto">MADELOS DE GUITARRA MAIS CONHECIDOS</h3>
+    <div class="subtitle-underline"></div>
+    <div class="cols cols-4">
+        <!-- Produto 1 -->
+        <div class="product">
+            <button class="favorite-button" onclick="toggleFavorite(this)">
+           
+            </button>
+            <a href="detalheproduto.html">
+                <img src="imagem/produto5guitarra.jpeg" alt="">
+                
+            </a>
+            <p class="produtos-nomes">Fender Player Stratocaster</p>
+            <p class="rate">&#9733;&#9733;&#9733;&#9734;</p>
+            <p class="produto-price">3.999,00 <span>R$</span></p>
+        </div>
+        <!-- Produto 2 -->
+        <div class="product">
+            <button class="favorite-button" onclick="toggleFavorite(this)">
+             
+            </button>
+            <a href="detalheproduto2.html">
+                <img src="imagem/produto4guitarra.jpeg" alt="">
+             
+            </a>
+            <p class="produtos-nomes">Ibanez RG421H</p>
+            <p class="rate">&#9733;&#9733;&#9733;&#9734;</p>
+            <p class="produto-price">2.199,00 <span>R$</span></p>
+        </div>
+        <!-- Produto 3 -->
+        <div class="product">
+            <button class="favorite-button" onclick="toggleFavorite(this)">
+              
+            </button>
+            <a href="detalheproduto3.html">
+                <img src="imagem/produto6guitarra.jpeg" alt="">     
+            </a>
+            <p class="produtos-nomes">Condor RX-20</p>
+            <p class="rate">&#9733;&#9733;&#9733;&#9733;</p>
+            <p class="produto-price">1.200,00 <span>R$</span></p>
+        </div>
+
+
+
+        <div class="product">
+            <button class="favorite-button" onclick="toggleFavorite(this)">
+              
+            </button>
+            <a href="detalheproduto3.html">
+                <img src="imagem/produto1guitarra.jpeg" alt="">
+             
+            </a>
+            <p class="produtos-nomes">Condor RX-25</p>
+            <p class="rate">&#9733;&#9733;&#9733;&#9734;</p>
+            <p class="produto-price">1.500,00 <span>R$</span></p>
+        </div>
+    </div>
+
+    </div>
+
+
+
+
+
+
+    <h3 class="section-texto">MAIS VENDIDOS</h3>
+    <div class="subtitle-underline"></div>
+    <div class="cols cols-4">
+        <!-- Produto 4 -->
+        <div class="product">
+            <button class="favorite-button" onclick="toggleFavorite(this)">
+        
+            </button>
+            <a href="detalheproduto4.html">
+                <img src="imagem/baixoimg24jpeg.jpeg" alt="">
+            
+            </a>
+            <p class="produtos-nomes">Contrabaixo Yamaha BB235</p>
+            <p class="rate">&#9733;&#9733;&#9733;&#9734;</p>
+            <p class="produto-price">3.599,00 <span>R$</span></p>
+        </div>
+        <!-- Produto 5 -->
+        <div class="product">
+            <button class="favorite-button" onclick="toggleFavorite(this)">
+               
+            </button>
+            <a href="detalheproduto5.html">
+                <img src="imagem/baixoimg4.jpeg" alt="">
+               
+            </a>
+            <p class="produtos-nomes">Contrabaixo Yamaha 370A</p>
+            <p class="rate">&#9733;&#9733;&#9733;&#9734;</p>
+            <p class="produto-price">2.299,00 <span>R$</span></p>
+        </div>
+        <!-- Produto 6 -->
+        <div class="product">
+            <button class="favorite-button" onclick="toggleFavorite(this)">
+                
+            </button>
+            <a href="detalheproduto6.html">
+                <img src="imagem/bateria3.jpeg" alt="">
+             
+            </a>
+            <p class="produtos-nomes"> Pearl Roadshow RS525S</p>
+            <p class="rate">&#9733;&#9733;&#9733;&#9734;</p>
+            <p class="produto-price">2.299,00 <span>R$</span></p>
+        </div>
+
+        <div class="product">
+            <button class="favorite-button" onclick="toggleFavorite(this)">
+               
+            </button>
+            <a href="detalheproduto5.html">
+                <img src="imagem/GUIimg3.jpeg" alt="">
+               
+            </a>
+            <p class="produtos-nomes">Guitarra Elétrica Stratocaster</p>
+            <p class="rate">&#9733;&#9733;&#9733;&#9734;</p>
+            <p class="produto-price">2.299,00 <span>R$</span></p>
+        </div>
+
+    </div>
+
+
+
+
+
+
+ <h3 class="section-texto">Outros Produtos</h3>
+    <div class="subtitle-underline"></div>
+    <div class="cols cols-4">
+        <!-- Produto 4 -->
+        <div class="product">
+            <button class="favorite-button" onclick="toggleFavorite(this)">
+        
+            </button>
+            <a href="detalheproduto4.html">
+                <img src="imagem/bateria1.jpeg" alt="">
+                
+            </a>
+            <p class="produtos-nomes">Pearl Roadshow 5 peças</p>
+            <p class="rate">&#9733;&#9733;&#9733;&#9734;</p>
+            <p class="produto-price">3.599,00 <span>R$</span></p>
+        </div>
+        <!-- Produto 5 -->
+        <div class="product">
+            <button class="favorite-button" onclick="toggleFavorite(this)">
+               
+            </button>
+            <a href="detalheproduto5.html">
+                <img src="imagem/violao2.jpeg" alt="">
+                
+            </a>
+            <p class="produtos-nomes">Tama Imperialstar 5 peças</p>
+            <p class="rate">&#9733;&#9733;&#9733;&#9734;</p>
+            <p class="produto-price">4.299,00 <span>R$</span></p>
+        </div>
+        <!-- Produto 6 -->
+        <div class="product">
+            <button class="favorite-button" onclick="toggleFavorite(this)">
+                
+            </button>
+            <a href="detalheproduto6.html">
+                <img src="imagem/violao1.jpeg" alt="">
+               
+            </a>
+            <p class="produtos-nomes">Auburn Music Aubvo622</p>
+            <p class="rate">&#9733;&#9733;&#9733;&#9734;</p>
+            <p class="produto-price">1.299,00 <span>R$</span></p>
+        </div>
+
+        <div class="product">
+            <button class="favorite-button" onclick="toggleFavorite(this)">
+               
+            </button>
+            <a href="detalheproduto5.html">
+                <img src="imagem/bateria2.jpeg" alt="">
+            </a>
+            <p class="produtos-nomes">Strinberg SD200C Mahogany</p>
+            <p class="rate">&#9733;&#9733;&#9733;&#9734;</p>
+            <p class="produto-price">1.599,00 <span>R$</span></p>
+        </div>
+        
+    </div>
+    
+</div>
+
+    
+   
+   
+   
+   
+   
+   
+   
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>Sobre Nós</h4>
+                <p>Somos especializados em instrumentos musicais, trazendo qualidade e variedade para você.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Siga-nos</h4>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Tonner Studio - Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+
+
+</html>

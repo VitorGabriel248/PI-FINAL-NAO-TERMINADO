@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Finalizar Pagamento</title>
+  <link rel="stylesheet" href="pagamento.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <img src="imagem/LOGO_CLIENTE-removebg-preview (1).png" alt="Logotipo">
+    </div>
+    <input type="checkbox" id="menu-mobile">
+    <label for="menu-mobile" class="menu-toggle">&#9776;</label>
+    <nav>
+      <ul class="menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Sobre</a></li>
+        <li><a href="#">Serviços</a></li>
+        <li><a href="#">Contato</a></li>
+        <li class="icon-only"><a href="#"><i class="fas fa-heart"></i></a></li>
+        <li class="icon-only"><a href="carinho.html"><i class="fas fa-shopping-cart"></i></a></li>
+        <li class="icon-only"><a href="#"><i class="fas fa-user"></i></a></li>
+      </ul>
+    </nav>
+    <div class="search-bar">
+      <input type="text" placeholder="Pesquisar...">
+      <button>Buscar</button>
+    </div>
+  </header>
+
+  <!-- Formulário de Pagamento -->
+  <div class="container">
+    <h2>Finalizar Pagamento</h2>
+    <form action="" method="POST">
+      <label for="name">Nome Completo</label>
+      <input type="text" id="name" name="name" placeholder="Seu nome" required>
+      
+      <label for="email">E-mail</label>
+      <input type="email" id="email" name="email" placeholder="Seu e-mail" required>
+
+      <label for="payment-method">Forma de Pagamento</label>
+      <select id="payment-method" name="payment-method">
+        <option value="cartao-credito">Cartão de Crédito</option>
+        <option value="boleto">Boleto Bancário</option>
+        <option value="pix">Pix</option>
+      </select>
+
+      <label for="amount">Valor do Pedido (R$)</label>
+      <input type="number" id="amount" name="amount" value="1550" readonly>
+
+      <label for="frete">Frete (R$50 fixo)</label>
+      <input type="number" id="frete" name="frete" value="50" readonly>
+
+      <label for="total">Total (R$)</label>
+      <input type="number" id="total" name="total" readonly>
+
+      <button type="button" onclick="calcularTotal()">Calcular Total</button>
+      <button type="submit"><a href="pagamentofinal.html"></a>Confirmar Pagamento</button>
+    </form>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-section">
+        <h4>Sobre Nós</h4>
+        <p>Somos especializados em instrumentos musicais, trazendo qualidade e variedade para você.</p>
+      </div>
+      <div class="footer-section">
+        <h4>Siga-nos</h4>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Tonner Studio - Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script>
+    function calcularTotal() {
+      const pedido = 1550;
+      const frete = 50;
+      document.getElementById('total').value = pedido + frete;
+    }
+    document.addEventListener("DOMContentLoaded", calcularTotal);
+  </script>
+
+</body>
+</html>
